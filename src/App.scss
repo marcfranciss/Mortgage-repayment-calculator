@@ -1,0 +1,50 @@
+@use "./sass/abstract/" as *;
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+/* Hide the spinner in Webkit browsers */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Reset button apperance*/ 
+button {
+  outline: none;
+  border: none;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+// /* Hide the spinner in Firefox */
+// input[type="number"] {
+//   -moz-appearance: textfield;
+// }
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: $clr-slate-100;
+}
+main {
+  max-width: 63rem;
+  display: flex;
+  flex-direction: row;
+  margin-inline: auto;
+  margin-block: 13rem;
+  border-radius: 1.75rem;
+  overflow: hidden;
+  background-color: $clr-accent;
+  @media (max-width: 60rem) {
+    margin: 2.5rem;
+    flex-direction: column;
+  }
+  @media (max-width: 30rem) {
+    margin: 0;
+    min-height: 100vh;
+    border-radius: 0;
+  }
+}

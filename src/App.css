@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+.fadeInUp {
+  animation: 1.5s fadeInUp;
+}
+
+@keyframes swipeIn {
+  0% {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+.swipeIn {
+  animation: 0.7s swipeIn;
+}
+
+@keyframes swipeOutUp {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+}
+.swipeOutUp {
+  animation: 1.5s swipeOut;
+}
+
+@keyframes appearIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.appearIn {
+  animation: appearIn 0.8s ease;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+/* Hide the spinner in Webkit browsers */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Reset button apperance*/
+button {
+  outline: none;
+  border: none;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: rgb(228, 244, 253);
+}
+
+main {
+  max-width: 63rem;
+  display: flex;
+  flex-direction: row;
+  margin-inline: auto;
+  margin-block: 13rem;
+  border-radius: 1.75rem;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+}
+@media (max-width: 60rem) {
+  main {
+    margin: 2.5rem;
+    flex-direction: column;
+  }
+}
+@media (max-width: 30rem) {
+  main {
+    margin: 0;
+    min-height: 100vh;
+    border-radius: 0;
+  }
+}/*# sourceMappingURL=App.css.map */

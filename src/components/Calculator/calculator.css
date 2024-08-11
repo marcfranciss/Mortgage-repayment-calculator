@@ -1,0 +1,98 @@
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+.fadeInUp {
+  animation: 1.5s fadeInUp;
+}
+
+@keyframes swipeIn {
+  0% {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+.swipeIn {
+  animation: 0.7s swipeIn;
+}
+
+@keyframes swipeOutUp {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+}
+.swipeOutUp {
+  animation: 1.5s swipeOut;
+}
+
+@keyframes appearIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.appearIn {
+  animation: appearIn 0.8s ease;
+}
+
+section {
+  padding: 2.5rem;
+  width: 50%;
+}
+@media (max-width: 60em) {
+  section {
+    width: 100%;
+  }
+}
+@media (max-width: 30em) {
+  section {
+    padding-inline: 1.5rem;
+    padding-block: 2rem;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 125%;
+  color: rgb(19, 48, 65);
+}
+.header .btn-clear {
+  text-decoration: underline;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 150%;
+  color: rgb(78, 110, 126);
+  text-underline-offset: 4px;
+}
+.header .btn-clear:hover {
+  color: rgb(19, 48, 65);
+}/*# sourceMappingURL=calculator.css.map */

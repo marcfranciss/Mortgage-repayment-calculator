@@ -1,0 +1,150 @@
+@use "../../sass/abstract/" as *;
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+h2 {
+    @include preset-400;
+    color: $clr-slate-700;
+    }
+input {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    @include preset-300;
+    color: $clr-slate-900;
+    letter-spacing: 1px;
+    width: 100%;
+    
+    cursor: pointer;
+    padding-block: 12.5px;
+    padding-inline: 1rem;
+    outline: none;
+    border: none;
+}
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    &.error-state {
+        .input-cntnr {border: 1px solid $clr-secondary;}
+        .lbl-text {background-color: $clr-secondary;color: $clr-accent;}
+    }
+    .input-cntnr {
+        width: 100%;
+        border: 1px solid $clr-slate-500;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-radius: .5rem;
+        overflow: hidden;
+        &:hover {border-color: $clr-slate-900;}
+        &:focus-within {border-color: $clr-primary !important;
+            span {background-color: $clr-primary !important;}
+            }
+        }
+        .lbl-text {
+            font-family: "Plus Jakarta Sans", sans-serif;
+            align-content: center;
+            @include preset-300;
+            color: $clr-slate-700;
+            background-color: $clr-slate-100;
+            padding-block: 12.5px;
+            padding-inline: 1rem;
+        }
+    .radio-cntnr {
+        width: 100%;
+        height: 3rem;
+        padding: 1rem 12.5px;
+        gap: 1rem;
+        border: 1px solid $clr-slate-500;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-radius: .5rem;
+        overflow: hidden;
+        cursor: pointer;
+        @include preset-300;
+        &:hover {border-color: $clr-primary;}
+        .lbl-radio {
+            position: relative;
+            font-family: "Plus Jakarta Sans", sans-serif;
+            width: 20px;
+            height: 20px;
+            padding-block: 12.5px;
+            padding-inline: 1rem;
+            @include preset-300;
+            color: $clr-slate-900;
+        }
+    }
+}
+.radio-cntnr:has(:checked) {
+    border-color: $clr-primary;
+    background: $clr-primary-accent;
+    .lbl-radio {accent-color: $clr-primary;}
+    /* Created a new radion button style*/ 
+    .lbl-radio:after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        border: 4px solid white;
+        outline: 1px solid $clr-primary;
+        background: $clr-primary;
+        }
+}
+
+.factors {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+    .terms-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1.5rem;
+        @media (max-width: 30rem) {
+            flex-direction: column;
+            }
+    }
+}
+.type {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+.error-msg {
+    color: $error-clr;
+    @include preset-500;
+    animation: 0.7s swipeIn;
+}
+.calculate-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    padding: 1rem 2.5rem;
+    @include preset-300;
+    color: $clr-slate-900;
+    background-color: $clr-primary;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 1rem;
+    @media (max-width: 30rem) {
+        margin-top: 0;
+        width: 100%;
+    }
+    transition: all 0.7s ease;
+    &:hover {
+        background-color: $clr-primary-accent;
+    }
+}
+.btn-img {
+    width: 17px;
+    height: 20px;
+    margin-right: 1rem;
+}

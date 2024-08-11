@@ -1,0 +1,38 @@
+@use "../../sass/abstract/" as *;
+
+section {
+    padding: 2.5rem;
+    width: 50%;
+    @media (max-width: 60em) {
+        width: 100%;
+    }
+    @media (max-width: 30em) {
+        padding-inline: 1.5rem;
+        padding-block: 2rem;
+    }
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+
+    h1 {
+       @include preset-200;
+       color: $clr-slate-900;
+    }
+    .btn-clear {
+        text-decoration: underline;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background: transparent;
+        @include preset-400;
+        color: $clr-slate-700;
+        text-underline-offset: 4px;
+        &:hover {
+            color: $clr-slate-900;
+        }
+    }
+}
